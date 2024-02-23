@@ -1,9 +1,12 @@
-import { Jumbotron } from '../../components/organisms'
+import { Navbar } from '../../components'
+import { Jumbotron, OurServices } from '../../components/organisms'
 
 export default function Home (): JSX.Element {
   return (
-    <>
-      <Jumbotron/>
-    </>
+    <div className='relative'>
+      <Navbar/>
+      <Jumbotron />
+      <OurServices/>
+    </div>
   )
 }

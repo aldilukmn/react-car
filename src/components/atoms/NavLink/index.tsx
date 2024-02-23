@@ -11,7 +11,7 @@ const isStyle = 'bg-secondary px-3 text-white border rounded w-fit'
 export default function NavLink ({ name, to, customStyle }: LinkProps): JSX.Element {
   return (
     <>
-      <Link to={to} className={` py-2 ${customStyle ? isStyle : ''}`}>{name}</Link>
+      <Link to={to} className={`py-2 ${customStyle ? isStyle : ''}`}>{name}</Link>
     </>
   )
 }
