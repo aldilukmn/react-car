@@ -1,12 +1,13 @@
 interface LogoProps {
   src: string
   alt: string
+  className?: string
 }
 
-export default function Logo ({ src, alt }: LogoProps): JSX.Element {
+export default function Logo ({ src, alt, className }: LogoProps): JSX.Element {
   return (
     <>
-      <img src={src} alt={alt} />
+      <img src={src} alt={alt} className={className} />
     </>
   )
 }

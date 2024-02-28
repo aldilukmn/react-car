@@ -1,4 +1,6 @@
-export const menu = [
+import type { MenuType } from './types'
+
+export const menu: MenuType[] = [
   { name: 'Home' },
   { name: 'Our Services' },
   { name: 'Why Us' },

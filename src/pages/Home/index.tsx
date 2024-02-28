@@ -1,12 +1,18 @@
 import { Navbar } from '../../components'
-import { Jumbotron, OurServices } from '../../components/organisms'
+import { Banner, FAQ, Jumbotron, OurServices, Testimonial, WhyUs } from '../../components/organisms'
 
 export default function Home (): JSX.Element {
   return (
-    <div className='relative'>
-      <Navbar/>
-      <Jumbotron />
-      <OurServices/>
-    </div>
+    <>
+      <div className='relative overflow-hidden max-w-[1400px] mx-auto'>
+        <Navbar/>
+        <Jumbotron />
+        <OurServices />
+        <WhyUs />
+        <Testimonial />
+        <Banner />
+        <FAQ/>
+      </div>
+    </>
   )
 }
