@@ -5,7 +5,7 @@ import { Lists, content, title } from './data'
 export default function BodyFAQ (): JSX.Element {
   return (
     <>
-      <section className='mx-5 lg:mx-20 mt-20 flex flex-col lg:flex-row'>
+      <section className='mx-5 lg:mx-20 flex flex-col lg:flex-row'>
         <section className='lg:w-1/2 text-center lg:text-start'>
           <HeadingTwo content={title} className='font-bold text-2xl mb-3' />
           <Paragraf content={content} className='mb-10 lg:mb-0' />

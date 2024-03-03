@@ -3,7 +3,9 @@ import { BodyBanner } from '../../molecules'
 export default function Banner (): JSX.Element {
   return (
     <>
-      <BodyBanner/>
+      <div className='mt-20'>
+        <BodyBanner/>
+      </div>
     </>
   )
 }

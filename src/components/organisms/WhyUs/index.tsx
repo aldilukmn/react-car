@@ -3,7 +3,9 @@ import { BodyWhyUs } from '../../molecules'
 export default function WhyUs (): JSX.Element {
   return (
     <>
-      <BodyWhyUs/>
+      <div className='mt-20'>
+        <BodyWhyUs/>
+      </div>
     </>
   )
 }
