@@ -17,7 +17,7 @@ export default function BodyTestimonial (): JSX.Element {
   const { isOpen, openModal, closeModal, userReview } = seeMoreModalBox()
   return (
     <>
-      <section className='mt-20 text-center'>
+      <section className='text-center'>
         <HeadingTwo content={title} className='font-bold text-2xl mb-5' />
         <Paragraf content={body} className='mb-10'/>
         <section className='flex mb-5'>

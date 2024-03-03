@@ -6,7 +6,7 @@ import { HeadingOneContent, listContent, paragrafContent } from './data'
 export default function BodyOurServices (): JSX.Element {
   return (
     <>
-      <div className='flex lg:flex-row flex-col items-center mt-20 gap-10'>
+      <div className='flex lg:flex-row flex-col items-center gap-10'>
         <section className='w-7/12 lg:w-1/2'>
           <Image src={imageOurServices} alt='our-services-image' className='lg:ml-20 ' />
         </section>

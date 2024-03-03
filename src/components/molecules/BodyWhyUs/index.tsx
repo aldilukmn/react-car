@@ -5,7 +5,7 @@ import { body, contentCard, title } from './data'
 export default function BodyWhyUs (): JSX.Element {
   return (
     <>
-      <div className='mt-20 lg:mt-36 mx-5 lg:mx-20'>
+      <div className='lg:mt-36 mx-5 lg:mx-20'>
         <HeadingTwo content={title} className='font-bold text-2xl mb-5' />
         <Paragraf content={body} className='mb-10' />
         <section className='grid md:grid-cols-2 lg:grid-cols-4 gap-10'>

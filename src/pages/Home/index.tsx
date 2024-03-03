@@ -1,5 +1,5 @@
 import { Navbar } from '../../components'
-import { Banner, FAQ, Jumbotron, OurServices, Testimonial, WhyUs } from '../../components/organisms'
+import { Banner, FAQ, Footer, Jumbotron, OurServices, Testimonial, WhyUs } from '../../components/organisms'
 
 export default function Home (): JSX.Element {
   return (
@@ -11,7 +11,8 @@ export default function Home (): JSX.Element {
         <WhyUs />
         <Testimonial />
         <Banner />
-        <FAQ/>
+        <FAQ />
+        <Footer/>
       </div>
     </>
   )
