@@ -6,5 +6,6 @@ import BodyTestimonial from './BodyTestimonial'
 import BodyBanner from './BodyBanner'
 import BodyFAQ from './BodyFAQ'
 import BodyFooter from './BodyFooter'
+import BodySearchBox from './BodySearchBox'
 
-export { Navbar, BodyJumbotron, BodyOurServices, BodyWhyUs, BodyTestimonial, BodyBanner, BodyFAQ, BodyFooter }
+export { Navbar, BodyJumbotron, BodyOurServices, BodyWhyUs, BodyTestimonial, BodyBanner, BodyFAQ, BodyFooter, BodySearchBox }

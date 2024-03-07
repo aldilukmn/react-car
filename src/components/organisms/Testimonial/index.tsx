@@ -3,7 +3,7 @@ import { BodyTestimonial } from '../../molecules'
 export default function Testimonial (): JSX.Element {
   return (
     <>
-      <div className='mt-20'>
+      <div id='testimonial' className='mt-20'>
         <BodyTestimonial/>
       </div>
     </>

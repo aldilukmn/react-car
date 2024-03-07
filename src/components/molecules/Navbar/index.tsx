@@ -5,18 +5,24 @@ import { screenSize } from '../../../libs/screenSize'
 import { useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { scrollSize } from '../../../libs/scrollSize'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import type { RootState } from '../../../config/Redux/store'
 
 export default function Navbar (): JSX.Element {
   const { width } = screenSize()
   const { scrollY } = scrollSize()
   const [humbergerMenu, setHumbergerMenu] = useState<boolean>(false)
+  const getPathLocation = useSelector((state: RootState) => state.pathLocationReducer)
   const handleHumbergerMenu = (): void => {
     setHumbergerMenu((prev) => !prev)
   }
   return (
     <>
       <div className={`fixed z-[9999] bg-white h-20 w-full ${scrollY >= 100 ? 'shadow-md' : ''}`}></div>
+      <Link to='/'>
         <Logo src={LogoImg} alt='logo' className='fixed top-6 left-5 lg:left-20 z-[9999]' />
+      </Link>
           {
             width >= 1024
               ? (
@@ -25,9 +31,24 @@ export default function Navbar (): JSX.Element {
                 menu.map((val, index) => {
                   const isRegister = val.name === 'Register'
                   const isName = val.name === 'Home' ? '' : val.name
+                  const getLink = val.name.toLowerCase().split(' ').join('-')
                   return (
                     <div key={index}>
-                      <NavLink name={isName} to={val.name.toLowerCase().split(' ').join('-')} customStyle={isRegister} />
+                      {
+                        isRegister
+                          ? (
+                          <>
+                            <NavLink name={isName} to={getLink} customStyle={isRegister} />
+                          </>
+                            )
+                          : getPathLocation.pathLocation === '/search'
+                            ? <>
+                              <NavLink name={isName} to={`/#${getLink}`} customStyle={false} />
+                          </>
+                            : <>
+                            <a href={`#${getLink}`}>{ isName }</a>
+                          </>
+                      }
                     </div>
                   )
                 })
@@ -48,10 +69,23 @@ export default function Navbar (): JSX.Element {
                     {
                       menu.map((val, index) => {
                         const isRegister = val.name === 'Register'
-                        const displayName = val.name === 'Home' ? 'BCR' : val.name
+                        const isName = val.name === 'Home' ? 'BCR' : val.name
+                        const getLink = val.name.toLowerCase().split(' ').join('-')
                         return (
-                          <div key={index} className={`mb-4 ${displayName === 'BCR' ? 'font-bold' : ''}`}>
-                            <NavLink name={displayName} to={val.name.toLocaleLowerCase().split(' ').join('-')} customStyle={isRegister}/>
+                          <div key={index} className={`mb-4 ${isName === 'BCR' ? 'font-bold' : ''}`}>
+                            {
+                        isRegister
+                          ? (
+                          <>
+                            <NavLink name={isName} to={getLink} customStyle={isRegister} />
+                          </>
+                            )
+                          : (
+                            <>
+                              <a href={`#${getLink}`}>{ isName }</a>
+                            </>
+                            )
+                      }
                           </div>
                         )
                       })

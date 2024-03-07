@@ -44,9 +44,9 @@ export default function BodyTestimonial (): JSX.Element {
                   <div className='flex text-yellow-500 mb-2 lg:justify-start justify-center'>
                     {
                       Array.from({ length: 5 }).map((_, index) => (
-                        <>
-                          <Icon key={index} icon="material-symbols:star-rate" width={20} />
-                        </>
+                        <div key={index}>
+                          <Icon icon="material-symbols:star-rate" width={20} />
+                        </div>
                       ))
                     }
                   </div>
