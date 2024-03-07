@@ -1,10 +1,20 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { Home } from '../../pages'
+import { Public } from '../Provider'
+import { Home, Search } from '../../pages'
 
 const routers = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />
+    element: <Public/>,
+    children: [
+      {
+        path: '/',
+        element: <Home/>
+      },
+      {
+        path: '/search',
+        element: <Search/>
+      }
+    ]
   }
 ])
 

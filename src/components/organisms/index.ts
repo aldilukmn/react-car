@@ -5,5 +5,6 @@ import Testimonial from './Testimonial'
 import Banner from './Banner'
 import FAQ from './FAQ'
 import Footer from './Footer'
+import SearchBox from './SearchBox'
 
-export { Jumbotron, OurServices, WhyUs, Testimonial, Banner, FAQ, Footer }
+export { Jumbotron, OurServices, WhyUs, Testimonial, Banner, FAQ, Footer, SearchBox }
